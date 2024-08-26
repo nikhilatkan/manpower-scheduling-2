@@ -1,92 +1,47 @@
-import { useState } from "react";
-import { FaEye } from "react-icons/fa";
-import { FaEyeSlash } from "react-icons/fa";
-import { Link } from "react-router-dom";
-// import OAuth from "../../components/OAuth/OAuth";
-import "./SignIn.css";
+import React from 'react';
+import SPManpowerImg from '../../assets/images/SPMapower_img2.webp';
+import './SignIn.css';
+import Navbar from '../../components/Navbar/Navbar';
 
-function SignIn() {
-  const [formData, setFormData] = useState({ email: "", password: "" });
-  const [showPassword, setShowPassword] = useState(false);
-
-  const { email, password } = formData;
-
-  function onChange(e) {
-    setFormData((prevState) => ({
-      ...prevState,
-      [e.target.id]: e.target.value,
-      // console.log(e.target.value);
-    }));
-  }
-
+const SignIn = () => {
   return (
-    <section className="sign-in-heading">
-      <h1>Sign in</h1>
-      <div className="sign-in-container">
-        <div className="signin-img-container">
-          <img
-            className="signin-img"
-            src="https://ecartes.in/wp-content/uploads/2021/08/manpower.jpg"
-            alt="key"
-          />
-        </div>
-        <div className="input-signin">
-          <form className="signin-forms">
-            <input
-              type="email"
-              className="textfld-signin"
-              id="email"
-              value={email}
-              onChange={onChange}
-              placeholder="User ID"
-            />
-            <div className="pass-signin">
-              <input
-                type={showPassword ? "text" : "password"}
-                className="textfld-signin"
-                id="password"
-                value={password}
-                onChange={onChange}
-                placeholder="Password"
-              />
-              {showPassword ? (
-                <FaEyeSlash
-                  className="eye-signin"
-                  onClick={() => setShowPassword((prevState) => !prevState)}
-                />
-              ) : (
-                <FaEye
-                  className="eye-signin"
-                  // onClick={setShowPassword(false)}
-                  onClick={() => setShowPassword((prevState) => !prevState)}
-                />
-              )}
+    <div>
+      <Navbar />
+      <div className="login-container">
+        <div className="login-form">
+          <h1 className="login-title">Welcome to SP Manpower!</h1>
+          <p>Please sign-in to your account.</p>
+          <form className='form-container'>
+            <div className="form-group">
+              <input type="email" placeholder="Email" required />
             </div>
-            <div className="sign-in-links">
-              {/* <p>
-                Don't have an account?
-                <Link to="/sign-up"> Register</Link>
-              </p>
-              <p>
-                <Link to="/forgot-password" className="frgt-signin">
-                  Forgot Password?
-                </Link>
-              </p> */}
+            <div className="form-group">
+              <input type="password" placeholder="Password" required />
             </div>
-            <button type="submit" className="signin-btn">
-              Sign in
-            </button>
-            {/* <div className="or-sign-in">
-              <div className="border"></div>
-              <p className="or-content">OR</p>
-              <div className="border"></div>
-            </div> */}
-            {/* <OAuth /> */}
+            <div className="form-group">
+              <a href="#" className="forgot-password">Forgot Password?</a>
+            </div>
+            <button type="submit" className="login-button">SIGN IN</button>
           </form>
+          <p className="register-link">
+            New on our platform? <a href="#">Create an account</a>
+          </p>
+          {/* <div className="social-login">
+            <a href="#" className="social-icon">F</a>
+            <a href="#" className="social-icon">T</a>
+            <a href="#" className="social-icon">G</a>
+            <a href="#" className="social-icon">GH</a>
+          </div> */}
+        </div>
+        <div className="login-image">
+          <img className='sp-manpower-img' src={SPManpowerImg} />
         </div>
       </div>
-    </section>
+    </div>
   );
 }
 
 export default SignIn;
+
+
+
