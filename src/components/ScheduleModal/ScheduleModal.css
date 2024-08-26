@@ -1,0 +1,126 @@
+/* ScheduleModal.css */
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Darker overlay for focus */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    width: 400px;
+    max-width: 90%;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    position: relative;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    /* Set a clean font */
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333333;
+    /* Darker color for the title */
+}
+
+.modal-body {
+    margin-bottom: 20px;
+}
+
+.modal-body label {
+    display: block;
+    margin-bottom: 15px;
+    text-align: left;
+    font-weight: bold;
+    color: #444444;
+    /* Slightly lighter than the title for distinction */
+}
+
+.modal-body input[type="date"],
+.modal-body input[type="time"] {
+    width: calc(100% - 16px);
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.modal-body input[type="date"]:focus,
+.modal-body input[type="time"]:focus {
+    border-color: #007bff;
+    /* Focus color for inputs */
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.cancel-button,
+.schedule-shift-button {
+    background-color: #007bff;
+    /* Blue background color */
+    color: #ffffff;
+    /* White text color */
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.cancel-button:hover,
+.schedule-shift-button:hover {
+    background-color: #0056b3;
+    /* Darker blue on hover */
+    transform: translateY(-2px);
+    /* Slight lift effect */
+}
+
+.cancel-button {
+    background-color: #6c757d;
+    /* Grey color for Cancel button */
+}
+
+.cancel-button:hover {
+    background-color: #5a6268;
+    /* Darker grey on hover */
+}
+
+@media (max-width: 500px) {
+    .modal-content {
+        width: 90%;
+        /* Full width on small screens */
+        padding: 20px;
+        /* Smaller padding on small screens */
+    }
+
+    .modal-footer {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .cancel-button,
+    .schedule-shift-button {
+        width: 100%;
+        /* Full-width buttons on small screens */
+    }
+}

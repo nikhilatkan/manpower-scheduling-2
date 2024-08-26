@@ -1,0 +1,55 @@
+.associate-card {
+    display: flex;
+    align-items: center;
+    /* Vertically center all items */
+    width: 100%;
+    /* Full width of the container */
+    padding: 12px 16px;
+    border-bottom: 1px solid #ccc;
+    box-sizing: border-box;
+    /* Includes padding in width calculation */
+    overflow-x: auto;
+    justify-content: space-between;
+    /* Allows horizontal scrolling on smaller screens */
+}
+
+.associate-checkbox {
+    margin-right: 16px;
+}
+
+.associate-photo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 16px;
+    object-fit: cover;
+}
+
+.associate-name {
+    font-size: 16px;
+    font-weight: bold;
+    margin-right: 16px;
+    white-space: nowrap;
+    /* Prevents text wrapping */
+}
+
+.associate-number {
+    font-size: 14px;
+    color: #555;
+    margin-right: 16px;
+    white-space: nowrap;
+    /* Prevents text wrapping */
+}
+
+.associate-link {
+    color: #007BFF;
+    text-decoration: none;
+    font-size: 14px;
+    margin-right: 16px;
+    white-space: nowrap;
+    /* Prevents text wrapping */
+}
+
+.associate-link:hover {
+    text-decoration: underline;
+}
