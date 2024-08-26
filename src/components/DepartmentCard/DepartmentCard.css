@@ -1,0 +1,34 @@
+.department-card {
+    display: flex;
+    /* Makes the card a flex container */
+    flex-direction: row;
+    /* Aligns children (title and arrow) in a row */
+    justify-content: space-between;
+    /* Ensures the title and arrow are spaced apart */
+    align-items: center;
+    /* Vertically centers the content */
+    padding: 15px 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.department-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+
+.department-card-title {
+    font-size: 18px;
+    color: #333;
+}
+
+.department-card-arrow {
+    color: #007bff;
+    font-size: 20px;
+    margin-left: auto;
+    /* Pushes the arrow to the far right */
+}

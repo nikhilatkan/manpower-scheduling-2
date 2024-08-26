@@ -1,0 +1,124 @@
+/* HelloFresh Page Styles */
+.hellofresh-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    background-color: #f4f4f4;
+    /* Light grey background for a clean look */
+    min-height: 100vh;
+}
+
+.hellofresh-logo {
+    width: 120px;
+    /* Size of the logo */
+    margin-bottom: 20px;
+    /* Space between the logo and the title */
+}
+
+.content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1200px;
+    /* Limit the maximum width of the content */
+}
+
+.left-content {
+    flex: 1;
+    margin-right: 20px;
+    margin-top: 40px;
+    /* Space between the list and the image */
+}
+
+.right-image img {
+    width: 100%;
+    max-width: 600px;
+    height: 90vh;
+    /* Maintain aspect ratio */
+    border-radius: 10px;
+    /* Rounded corners for the image */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.hellofresh-title {
+    margin-bottom: 50px;
+    text-align: center;
+    font-size: xxx-large;
+}
+
+.hellofresh-title:hover {
+    /* Darken on hover */
+}
+
+.department-list {
+    width: 100%;
+    max-width: 1000px;
+    margin-top: 20px;
+}
+
+.department-item {
+    width: 100%;
+    padding: 20px;
+    margin: 10px 0;
+    background-color: #f9f9f9;
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-size: 1.2em;
+    font-weight: 500;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.department-item:hover {
+    background-color: #51b700;
+    /* Green background on hover */
+    color: white;
+    /* White text on hover */
+}
+
+.department-item:active {
+    transform: scale(0.97);
+    /* Subtle scale animation for click effect */
+}
+
+.arrow {
+    font-size: 1.4em;
+    color: #333;
+}
+
+@media (max-width: 900px) {
+    .content-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left-content {
+        margin-right: 0;
+        margin-bottom: 20px;
+        /* Space between the list and image on small screens */
+    }
+
+    .right-image img {
+        max-width: 100%;
+    }
+
+    .right-image {
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .hellofresh-title {}
+
+    .department-item {
+        padding: 15px;
+    }
+
+
+}

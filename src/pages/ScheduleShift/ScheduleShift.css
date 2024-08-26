@@ -1,0 +1,45 @@
+.associate-list {
+    margin-top: 2rem;
+}
+
+.schedule-shift-header {
+    text-align: center;
+}
+
+/* BottomFixedContainer.css */
+
+.bottom-fixed-container {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #ffffff;
+    /* You can change the background color */
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 20px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    /* Ensure the container stays above other content */
+}
+
+.schedule-shift-button {
+    background-color: #007bff;
+    /* Button background color */
+    color: #ffffff;
+    /* Button text color */
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.schedule-shift-button:hover {
+    background-color: #0056b3;
+    /* Button background color on hover */
+}
+
+.scheduleshift-button-container {
+    margin-right: 3rem;
+}
